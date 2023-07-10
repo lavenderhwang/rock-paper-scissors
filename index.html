@@ -40,28 +40,63 @@
 			             player wins if : (p: rock, c: scissors/ p: paper: c: rock/p: scissors, c: paper)
 			             else: computer wins */
 
-				let response;
+				let winner;
 
 				if (
-					(playerSelection.toLowerCase() === 'rock' &&
-						computerSelection.toLowerCase() === 'scissors') ||
-					(playerSelection.toLowerCase() === 'paper' &&
-						computerSelection.toLowerCase() === 'rock') ||
-					(playerSelection.toLowerCase() === 'scissors' &&
-						computerSelection.toLowerCase() === 'paper')
+					(playerSelection === 'rock' && computerSelection === 'Scissors') ||
+					(playerSelection === 'paper' && computerSelection === 'Rock') ||
+					(playerSelection === 'scissors' && computerSelection === 'Paper')
 				) {
-					response =
-						'You win! ' + playerSelection + ' beats ' + computerSelection;
+					winner = 'player';
 				} else {
-					response =
-						'You lose! ' + computerSelection + ' beats ' + playerSelection;
+					winner = 'computer';
 				}
-				console.log(response);
+
+				return roundResponse(winner, playerSelection, computerSelection);
 			}
 
-			const playerSelection = 'rock';
-			const computerSelection = getComputerChoice();
-			console.log(playRound(playerSelection, computerSelection));
+			function roundResponse(whoWon, a, b) {
+				if (whoWon == 'player') {
+					response = 'You win! ' + a + ' beats ' + b;
+				} else {
+					response = 'You lose! ' + b + ' beats ' + a;
+				}
+				return response;
+			}
+
+			function game() {
+				let playerScore = 0;
+				let computerScore = 0;
+
+				for (let i = 0; i < 5; i++) {
+					const playerSelection = prompt(
+						'Rock, paper, or scissors?'.toLowerCase()
+					);
+					const computerSelection = getComputerChoice();
+					let winner = playRound(playerSelection, computerSelection);
+					console.log(winner);
+
+					if (winner.includes('win')) {
+						playerScore++;
+					} else {
+						computerScore++;
+					}
+
+					console.log(
+						'Player points: ' +
+							playerScore +
+							'  Computer points: ' +
+							computerScore
+					);
+				}
+				if (playerScore > computerScore) {
+					console.log('Congrats! You won.');
+				} else {
+					console.log('Better luck next time!');
+				}
+			}
+
+			game();
 		</script>
 	</body>
 </html>
