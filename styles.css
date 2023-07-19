@@ -60,7 +60,7 @@ CREAM: #f6f5e1
 	gap: 150px;
 }
 
-/* POP UP */
+/* GAME */
 
 body {
 	height: 100vh;
@@ -79,4 +79,55 @@ body {
 	background-color: #f6f5e1;
 	/*fix box shadow to be even all around div*/
 	box-shadow: 4px 4px 10px #f7748c, -4px -4px 10px #f7748c;
+}
+
+/* POPUP */
+.end-game-popup {
+	width: 400px;
+	height: 150px;
+	padding: 20px;
+	background: #fdd2ce;
+	border-radius: 20px;
+	position: absolute;
+	transform: scale(0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	visibility: hidden;
+}
+
+.open-popup {
+	visibility: visible;
+	transform: scale(1);
+	transition: 0.5s;
+}
+
+.winner-text {
+	font-size: 18px;
+	margin-top: 17px;
+}
+
+.play-again-btn {
+	border-radius: 12px;
+	padding: 8px;
+	border: none;
+	outline: none;
+	background-color: #f8f7ed;
+	cursor: pointer;
+	box-shadow: 0 9px #e8e8de;
+}
+.play-again-btn:hover {
+	background-color: rgb(247, 245, 228);
+}
+
+.play-again-btn:active {
+	box-shadow: 0 5px #e8e8de;
+	transform: translateY(4px);
+}
+
+.is-blurred {
+	-webkit-filter: blur(2px);
+	filter: blur(2px);
 }
