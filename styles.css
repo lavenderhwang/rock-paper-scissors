@@ -1,0 +1,82 @@
+/* COLOR PALETTE 
+PINK: #fb9aac
+CREAM: #f6f5e1
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	outline: none;
+}
+
+.container {
+	text-align: center;
+}
+
+/* TITLE */
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* BUTTONS */
+.buttons-container {
+	margin: 25px;
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+}
+
+.btn {
+	padding: 10px;
+	width: 120px;
+	height: 60px;
+	border-radius: 15px;
+	border: none;
+	background-color: #fbc4bf;
+	font-size: 15px;
+	cursor: pointer;
+	box-shadow: 0 9px #fbaca5;
+}
+
+.btn:hover {
+	background-color: #fabdb8;
+}
+
+.btn:active {
+	background-color: #fabdb8;
+	box-shadow: 0 5px #fbaca5;
+	transform: translateY(4px);
+}
+
+/* SCORE DISPLAY */
+.score-display {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 150px;
+}
+
+/* POP UP */
+
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fb9aac;
+}
+
+.container {
+	position: absolute;
+	background: white;
+	padding: 60px 50px;
+	border-radius: 18px;
+	border: 2px solid none;
+	background-color: #f6f5e1;
+	/*fix box shadow to be even all around div*/
+	box-shadow: 4px 4px 10px #f7748c, -4px -4px 10px #f7748c;
+}

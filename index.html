@@ -4,45 +4,28 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rock Paper Scissors</title>
+		<link rel="stylesheet" href="styles.css" />
 		<script src="app.js" defer></script>
-
-		<style>
-			h1 {
-				text-align: center;
-			}
-
-			.icons {
-				display: flex;
-				justify-content: center;
-				gap: 30px;
-			}
-
-			button {
-				width: 100px;
-				height: 100px;
-			}
-
-			.scoreText {
-			}
-
-			.feedback {
-				text-align: center;
-			}
-
-			.restartButton {
-				width: 100px;
-				height: 30px;
-			}
-		</style>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<h1>Play Rock, Paper, Scissors</h1>
-		<div class="icons">
-			<button class="rock"></button>
-			<button class="paper"></button>
-			<button class="scissors"></button>
-		</div>
+		<div class="container">
+			<h1 class="title">Let's play a simple game</h1>
+			<div class="buttons-container">
+				<button class="btn rock-btn"><span>ROCK</span></button>
+				<button class="btn paper-btn"><span>PAPER</span></button>
+				<button class="btn scissors-btn"><span>SCISSORS</span></button>
+			</div>
 
-		<div class="results"></div>
+			<div class="score-display">
+				<p class="player-score">Player: <span>0</span></p>
+				<p class="computer-score">Computer: <span>0</span></p>
+			</div>
+		</div>
 	</body>
 </html>
